@@ -1,8 +1,8 @@
 ﻿# PowerShell script to search for a string in .evtx files with enhanced debugging
 
 # Parameters
-$searchString = "172.17.79.129"  # Replace with your search string (e.g., IP address, event code)
-$evtxPath = "C:\Users\madha\Downloads\hackthebox\campfire-2"  # Replace with the path to the folder containing .evtx files
+$searchString = "YOUR_SEARCH_STRING"  # Replace with your search string (e.g., IP address, event code)
+$evtxPath = "C:\Path\To\Your\EVTXFiles"  # Replace with the path to the folder containing .evtx files
 $startTime = $null  # Set to $null to search all events; or use (Get-Date).AddDays(-7) for last 7 days
 $caseSensitive = $false  # Set to $true for case-sensitive search
 
@@ -108,4 +108,5 @@ else {
 # Optionally export results to CSV
 $exportPath = ".\EventLogSearchResults.csv"
 $results | Export-Csv -Path $exportPath -NoTypeInformation
+
 Write-Host "Results exported to $exportPath"
